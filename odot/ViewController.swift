@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var addTaskTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+
+    //MARK: Configure Table View
+    ////////////////////////////
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    }
+
+
+    //MARK: Button Action
+    /////////////////////
+
+    @IBAction func addTaskButton(_ sender: UIButton) {
+    }
 
 }
 
