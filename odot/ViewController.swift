@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var addTaskTextField: UITextField!
 
+    var tasks = ["Do stuff", "Do more stuff", "Do even more stuff"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,12 +28,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: Configure Table View
     ////////////////////////////
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "todoItem", for: indexPath) as! TodoItemTableViewCell
+        cell.todoItemLabel.text = tasks[indexPath.row]
+        tableView.separatorStyle = .none
+        return cell
     }
 
 

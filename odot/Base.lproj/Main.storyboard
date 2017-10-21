@@ -26,17 +26,50 @@
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rc3-Na-z9w">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cxt-4C-R0M">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoItem" rowHeight="106" id="cxt-4C-R0M" customClass="TodoItemTableViewCell" customModule="odot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cxt-4C-R0M" id="J6l-KX-1gE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laZ-ai-2Dn">
+                                                    <rect key="frame" x="16" y="10" width="343" height="85.666666666666671"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkA-Ny-VP0">
+                                                            <rect key="frame" x="12" y="12" width="319" height="61.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="KkA-Ny-VP0" firstAttribute="leading" secondItem="laZ-ai-2Dn" secondAttribute="leading" constant="12" id="Ba2-oW-Bl1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="KkA-Ny-VP0" secondAttribute="bottom" constant="12" id="d6i-he-XcZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KkA-Ny-VP0" secondAttribute="trailing" constant="12" id="sqj-we-Dkt"/>
+                                                        <constraint firstItem="KkA-Ny-VP0" firstAttribute="top" secondItem="laZ-ai-2Dn" secondAttribute="top" constant="12" id="ttb-zU-aJx"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="laZ-ai-2Dn" secondAttribute="bottom" constant="10" id="AWl-AI-Qz8"/>
+                                                <constraint firstItem="laZ-ai-2Dn" firstAttribute="top" secondItem="J6l-KX-1gE" secondAttribute="top" constant="10" id="HMq-h0-Efc"/>
+                                                <constraint firstAttribute="trailing" secondItem="laZ-ai-2Dn" secondAttribute="trailing" constant="16" id="iSA-fn-DBv"/>
+                                                <constraint firstItem="laZ-ai-2Dn" firstAttribute="leading" secondItem="J6l-KX-1gE" secondAttribute="leading" constant="16" id="rgI-5j-Ztt"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="todoItemLabel" destination="KkA-Ny-VP0" id="6Of-67-qOy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rG9-ex-Ysu"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1d-0r-oeE">
                                 <rect key="frame" x="16" y="44" width="305" height="30"/>
@@ -52,7 +85,7 @@
                             <constraint firstItem="Rc3-Na-z9w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9j8-8f-Gd4"/>
                             <constraint firstItem="qoP-dG-dmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="Dr6-pg-DAa"/>
                             <constraint firstAttribute="bottom" secondItem="Rc3-Na-z9w" secondAttribute="bottom" id="EhE-0v-Zju"/>
-                            <constraint firstItem="r1d-0r-oeE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="U5G-iu-RLr"/>
+                            <constraint firstItem="r1d-0r-oeE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="U5G-iu-RLr"/>
                             <constraint firstItem="r1d-0r-oeE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="is0-Pi-cfC"/>
                             <constraint firstItem="Rc3-Na-z9w" firstAttribute="top" secondItem="r1d-0r-oeE" secondAttribute="bottom" constant="14" id="qSq-Hz-hdD"/>
                             <constraint firstItem="qoP-dG-dmE" firstAttribute="leading" secondItem="r1d-0r-oeE" secondAttribute="trailing" constant="16" id="rrI-JJ-WZi"/>
