@@ -10,6 +10,7 @@ import UIKit
 
 class TodoItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var todoItemLabel: UILabel!
     
     override func awakeFromNib() {

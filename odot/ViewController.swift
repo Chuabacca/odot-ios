@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoItem", for: indexPath) as! TodoItemTableViewCell
+        cell.cardView.layer.cornerRadius = 5.0
         cell.todoItemLabel.text = tasks[indexPath.row]
         tableView.separatorStyle = .none
         return cell

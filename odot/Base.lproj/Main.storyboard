@@ -63,6 +63,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cardView" destination="laZ-ai-2Dn" id="OC6-hV-Ju9"/>
                                             <outlet property="todoItemLabel" destination="KkA-Ny-VP0" id="6Of-67-qOy"/>
                                         </connections>
                                     </tableViewCell>
