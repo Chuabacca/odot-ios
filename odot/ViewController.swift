@@ -11,12 +11,14 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var addTaskTextField: UITextField!
+    @IBOutlet weak var todoTableView: UITableView!
 
-    var tasks = ["Do stuff", "Do more stuff", "Do even more stuff"]
+    var tasks = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        todoTableView.separatorStyle = .none
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +49,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /////////////////////
 
     @IBAction func addTaskButton(_ sender: UIButton) {
+        guard addTaskTextField.text != "" else { return }
+        tasks.append(addTaskTextField.text!)
+        todoTableView.reloadData()
+        //TODO: Clear the text field after todo item is added
+    }
+
+
+    func displayCells(cell: TodoItemTableViewCell, indexPath: IndexPath) {
+        cell.cardView.layer.cornerRadius = 5.0
+        cell.todoItemLabel.text = tasks[indexPath.row]
     }
 
 }

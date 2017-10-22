@@ -95,6 +95,7 @@
                     </view>
                     <connections>
                         <outlet property="addTaskTextField" destination="r1d-0r-oeE" id="zNt-rt-rcg"/>
+                        <outlet property="todoTableView" destination="Rc3-Na-z9w" id="FnM-kO-sMV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
