@@ -52,6 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         guard addTaskTextField.text != "" else { return }
         tasks.append(addTaskTextField.text!)
         todoTableView.reloadData()
+        addTaskTextField.text = ""
         //TODO: Clear the text field after todo item is added
     }
 
