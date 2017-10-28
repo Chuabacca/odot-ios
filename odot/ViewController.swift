@@ -38,8 +38,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoItem", for: indexPath) as! TodoItemTableViewCell
+        // not sure why this was required in the example
+        //cell.delegate = self
         cell.cardView.layer.cornerRadius = 5.0
         cell.todoItemLabel.text = tasks[indexPath.row]
+        cell.todoStatusButton.layer.cornerRadius = 10.0
+        cell.todoStatusButton.addTarget(self, action: #selector(self.toggleTodoStatus), for: UIControlEvents.touchUpInside)
+        cell.todoStatusButton.tag = indexPath.row
         tableView.separatorStyle = .none
         return cell
     }
@@ -57,6 +62,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //TODO: Clear the text field after todo item is added
     }
 
+    @IBAction func toggleTodoStatus(_ sender: UIButton) {
+        let buttonTag = sender.tag
+        
+    }
 
     func displayCells(cell: TodoItemTableViewCell, indexPath: IndexPath) {
         cell.cardView.layer.cornerRadius = 5.0
