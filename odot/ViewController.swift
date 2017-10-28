@@ -48,7 +48,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: Button Action
     /////////////////////
 
-    @IBAction func addTaskButton(_ sender: UIButton) {
+
+    @IBAction func addTask(_ sender: UIButton) {
         guard addTaskTextField.text != "" else { return }
         tasks.append(addTaskTextField.text!)
         todoTableView.reloadData()
