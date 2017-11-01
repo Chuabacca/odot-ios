@@ -28,6 +28,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         todoTableView.separatorStyle = .none
+
+        let tableViewTapped = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        todoTableView.addGestureRecognizer(tableViewTapped)
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +76,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         guard addTaskTextField.text != "" else { return }
         tasks.append(Task(text: addTaskTextField.text!, done: false))
         todoTableView.reloadData()
+        dismissKeyboard()
         addTaskTextField.text = ""
         //TODO: Clear the text field after todo item is added
     }
@@ -88,6 +92,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         print(tasks[todoIndex].done)
         todoTableView.reloadData()
+    }
+
+    @objc func dismissKeyboard() {
+        addTaskTextField.endEditing(true)
     }
 
 }
