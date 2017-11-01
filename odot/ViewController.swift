@@ -76,10 +76,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 
-    func displayCells(cell: TodoItemTableViewCell, indexPath: IndexPath) {
-        cell.cardView.layer.cornerRadius = 5.0
-        cell.todoItemLabel.text = tasks[indexPath.row]
-    }
-
 }
 
