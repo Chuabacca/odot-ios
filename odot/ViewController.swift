@@ -50,7 +50,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // not sure why this was required in the example
         //cell.delegate = self
         cell.cardView.layer.cornerRadius = 5.0
-        cell.todoItemLabel.text = tasks[indexPath.row]
+        cell.todoItemLabel.text = tasks[indexPath.row].text
+        if tasks[indexPath.row].done {
+            cell.todoStatusButton.backgroundColor = UIColor.orange
+        }
+        else {
+            cell.todoStatusButton.backgroundColor = UIColor.lightGray
+        }
         cell.todoStatusButton.layer.cornerRadius = 10.0
         cell.todoStatusButton.addTarget(self, action: #selector(self.toggleTodoStatus), for: UIControlEvents.touchUpInside)
         cell.todoStatusButton.tag = indexPath.row
@@ -72,8 +78,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     @IBAction func toggleTodoStatus(_ sender: UIButton) {
-        let buttonTag = sender.tag
-        
+        let todoIndex = sender.tag
+        print(todoIndex)
+        if tasks[todoIndex].done == false {
+            tasks[todoIndex].done = true
+        }
+        else {
+            tasks[todoIndex].done = false
+        }
+        print(tasks[todoIndex].done)
+        todoTableView.reloadData()
     }
 
 }
