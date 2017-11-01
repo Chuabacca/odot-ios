@@ -18,20 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoP-dG-dmE">
-                                <rect key="frame" x="337" y="48" width="22" height="22"/>
+                                <rect key="frame" x="337" y="62" width="22" height="22"/>
                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="addTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H50-H8-pe7"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1d-0r-oeE">
-                                <rect key="frame" x="16" y="44" width="305" height="30"/>
+                                <rect key="frame" x="16" y="58" width="305" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rc3-Na-z9w">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="102" width="375" height="710"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoItem" rowHeight="106" id="cxt-4C-R0M" customClass="TodoItemTableViewCell" customModule="odot" customModuleProvider="target">
@@ -98,10 +98,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qoP-dG-dmE" secondAttribute="trailing" constant="16" id="57Q-sH-YjY"/>
                             <constraint firstItem="Rc3-Na-z9w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="67E-9G-SXH"/>
                             <constraint firstItem="Rc3-Na-z9w" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="9j8-8f-Gd4"/>
-                            <constraint firstItem="qoP-dG-dmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="Dr6-pg-DAa"/>
+                            <constraint firstItem="qoP-dG-dmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="Dr6-pg-DAa"/>
                             <constraint firstAttribute="bottom" secondItem="Rc3-Na-z9w" secondAttribute="bottom" id="EhE-0v-Zju"/>
                             <constraint firstItem="r1d-0r-oeE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="U5G-iu-RLr"/>
-                            <constraint firstItem="r1d-0r-oeE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="is0-Pi-cfC"/>
+                            <constraint firstItem="r1d-0r-oeE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="is0-Pi-cfC"/>
                             <constraint firstItem="Rc3-Na-z9w" firstAttribute="top" secondItem="r1d-0r-oeE" secondAttribute="bottom" constant="14" id="qSq-Hz-hdD"/>
                             <constraint firstItem="qoP-dG-dmE" firstAttribute="leading" secondItem="r1d-0r-oeE" secondAttribute="trailing" constant="16" id="rrI-JJ-WZi"/>
                         </constraints>
