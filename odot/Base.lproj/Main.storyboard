@@ -24,8 +24,14 @@
                                     <action selector="addTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H50-H8-pe7"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rc3-Na-z9w">
-                                <rect key="frame" x="1" y="88" width="375" height="724"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1d-0r-oeE">
+                                <rect key="frame" x="16" y="44" width="305" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rc3-Na-z9w">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoItem" rowHeight="106" id="cxt-4C-R0M" customClass="TodoItemTableViewCell" customModule="odot" customModuleProvider="target">
@@ -86,18 +92,12 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="rG9-ex-Ysu"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1d-0r-oeE">
-                                <rect key="frame" x="16" y="44" width="305" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qoP-dG-dmE" secondAttribute="trailing" constant="16" id="57Q-sH-YjY"/>
-                            <constraint firstItem="Rc3-Na-z9w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="67E-9G-SXH"/>
-                            <constraint firstItem="Rc3-Na-z9w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9j8-8f-Gd4"/>
+                            <constraint firstItem="Rc3-Na-z9w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="67E-9G-SXH"/>
+                            <constraint firstItem="Rc3-Na-z9w" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="9j8-8f-Gd4"/>
                             <constraint firstItem="qoP-dG-dmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="Dr6-pg-DAa"/>
                             <constraint firstAttribute="bottom" secondItem="Rc3-Na-z9w" secondAttribute="bottom" id="EhE-0v-Zju"/>
                             <constraint firstItem="r1d-0r-oeE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="U5G-iu-RLr"/>

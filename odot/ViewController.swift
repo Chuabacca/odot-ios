@@ -13,7 +13,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var addTaskTextField: UITextField!
     @IBOutlet weak var todoTableView: UITableView!
 
-    var tasks = [String]()
+    var tasks = [Task]()
+
+    struct Task {
+        var text: String
+        var done: Bool
+        init (text: String, done: Bool) {
+            self.text = text
+            self.done = done
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBAction func addTask(_ sender: UIButton) {
         guard addTaskTextField.text != "" else { return }
-        tasks.append(addTaskTextField.text!)
+        tasks.append(Task(text: addTaskTextField.text!, done: false))
         todoTableView.reloadData()
         addTaskTextField.text = ""
         //TODO: Clear the text field after todo item is added
