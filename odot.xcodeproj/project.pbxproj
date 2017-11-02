@@ -13,6 +13,7 @@
 		5F01A9521F9BBD94009F6F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F01A9511F9BBD94009F6F01 /* Assets.xcassets */; };
 		5F01A9551F9BBD94009F6F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F01A9531F9BBD94009F6F01 /* LaunchScreen.storyboard */; };
 		5F01A95F1F9BCBD6009F6F01 /* TodoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01A95E1F9BCBD6009F6F01 /* TodoItemTableViewCell.swift */; };
+		5F66A7AA1FAA956200B29CC9 /* TodoItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A7A91FAA956200B29CC9 /* TodoItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5F01A9541F9BBD94009F6F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F01A9561F9BBD94009F6F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F01A95E1F9BCBD6009F6F01 /* TodoItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemTableViewCell.swift; sourceTree = "<group>"; };
+		5F66A7A91FAA956200B29CC9 /* TodoItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				5F01A94A1F9BBD93009F6F01 /* AppDelegate.swift */,
 				5F01A94C1F9BBD93009F6F01 /* ViewController.swift */,
+				5F66A7A91FAA956200B29CC9 /* TodoItemDetailViewController.swift */,
 				5F01A95E1F9BCBD6009F6F01 /* TodoItemTableViewCell.swift */,
 				5F01A94E1F9BBD94009F6F01 /* Main.storyboard */,
 				5F01A9511F9BBD94009F6F01 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F66A7AA1FAA956200B29CC9 /* TodoItemDetailViewController.swift in Sources */,
 				5F01A94D1F9BBD93009F6F01 /* ViewController.swift in Sources */,
 				5F01A95F1F9BCBD6009F6F01 /* TodoItemTableViewCell.swift in Sources */,
 				5F01A94B1F9BBD93009F6F01 /* AppDelegate.swift in Sources */,
